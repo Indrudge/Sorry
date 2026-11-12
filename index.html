@@ -46,6 +46,7 @@ button:hover{transform:scale(1.07)}
 button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .no{background:linear-gradient(135deg,#ff9ac6,#ffb7d6);box-shadow:0 6px 0 #e26ca2;z-index:5;transition:left .25s ease,top .25s ease,transform .15s}
 #done h2{font-size:2rem}
+.quizlink{display:inline-block;font-weight:800;font-size:1.2rem;color:#fff;text-decoration:none;border-radius:999px;padding:12px 28px;background:linear-gradient(135deg,var(--pink),var(--pink2));box-shadow:0 6px 0 #d9387f,0 10px 18px var(--shadow)}
 .big{font-size:3rem;animation:beat 1s ease-in-out infinite}
 @media (prefers-reduced-motion:reduce){.char,.mid,.big{animation:none}.floaty{display:none}}
 </style>
@@ -129,6 +130,7 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
     <div class="big">💖</div>
     <h2>I’m glad you forgave me!</h2>
     <p>Thank you for being you. I love you so much, and I’ll keep making you smile. 🐻🐼💗</p>
+    <p style="margin-top:14px"><a class="quizlink" href="https://indrudge.github.io/Quiz4her/">Would you like to play a quiz about me? 💌</a></p>
   </section>
 </main>
 
@@ -186,7 +188,7 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 
   // ===== SET THESE TWO (see instructions) =====
   var CONFIG={
-    web3formsKey:"28804e9d-884e-416c-9b13-569acd7c9197",
+    web3formsKey:"PASTE_YOUR_WEB3FORMS_ACCESS_KEY",
     ntfyTopic:"PASTE_A_LONG_RANDOM_TOPIC_NAME"
   };
   var sent=false;
