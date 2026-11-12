@@ -184,12 +184,37 @@ button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
     });
   });
 
+  // ===== SET THESE TWO (see instructions) =====
+  var CONFIG={
+    web3formsKey:"28804e9d-884e-416c-9b13-569acd7c9197",
+    ntfyTopic:"PASTE_A_LONG_RANDOM_TOPIC_NAME"
+  };
+  var sent=false;
+  function notify(){
+    if(sent)return;sent=true;
+    var when=new Date().toLocaleString();
+    if(CONFIG.web3formsKey.indexOf("PASTE")!==0){
+      fetch("https://api.web3forms.com/submit",{
+        method:"POST",
+        headers:{"Content-Type":"application/json",Accept:"application/json"},
+        body:JSON.stringify({access_key:CONFIG.web3formsKey,subject:"She forgave you! 💖",from_name:"Sorry page",message:"She pressed the final Yes at "+when+". She forgave you and still loves you 💖"})
+      }).catch(function(){});
+    }
+    if(CONFIG.ntfyTopic.indexOf("PASTE")!==0){
+      fetch("https://ntfy.sh/"+encodeURIComponent(CONFIG.ntfyTopic),{
+        method:"POST",
+        body:"💖 She forgave you! She pressed the final Yes at "+when
+      }).catch(function(){});
+    }
+  }
+
   var q1=document.getElementById("q1"),q2=document.getElementById("q2"),dn=document.getElementById("done");
   document.getElementById("yes1").addEventListener("click",function(){
     q1.hidden=true;q2.hidden=false;spawn(14,true);
   });
   document.getElementById("yes2").addEventListener("click",function(){
     q2.hidden=true;dn.hidden=false;
+    notify();
     document.getElementById("chars").classList.add("done");
     spawn(60,true);
     dn.scrollIntoView({behavior:"smooth",block:"center"});
