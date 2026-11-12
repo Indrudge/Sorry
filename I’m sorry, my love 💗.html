@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I’m sorry, my love 💗</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&display=swap">
+<style>
+:root{
+  --bg1:#ffe6f1;--bg2:#ffbfdc;--card:#fff7fb;--ink:#8a1c52;--soft:#b8447f;
+  --pink:#ff5fa2;--pink2:#ff8cc0;--chip:#ffd3e7;--shadow:rgba(255,95,162,.35);
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg1:#3a1028;--bg2:#5e1a42;--card:#4b1535;--ink:#ffd9ea;--soft:#ffb0d3;--chip:#6d2350;--shadow:rgba(255,95,162,.25);}
+}
+:root[data-theme="dark"]{--bg1:#3a1028;--bg2:#5e1a42;--card:#4b1535;--ink:#ffd9ea;--soft:#ffb0d3;--chip:#6d2350;--shadow:rgba(255,95,162,.25);}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:var(--ink);background:linear-gradient(160deg,var(--bg1),var(--bg2));font-family:"Baloo 2","Trebuchet MS",system-ui,sans-serif;overflow-x:hidden;text-align:center}
+.floaty{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.floaty span{position:absolute;bottom:-40px;animation:rise linear forwards}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+main{position:relative;z-index:1;max-width:560px;margin:0 auto;padding:28px 18px 48px}
+h1{font-size:clamp(2.4rem,9vw,3.6rem);font-weight:800;margin:6px 0 0;line-height:1.05;color:var(--pink)}
+.sub{margin:4px 0 0;color:var(--soft);font-weight:500}
+.chars{display:flex;justify-content:center;align-items:flex-end;gap:6px;margin:16px 0 4px}
+.char{width:min(42vw,200px);height:auto;filter:drop-shadow(0 8px 10px var(--shadow));animation:bob 2.4s ease-in-out infinite}
+.char.b{animation-delay:-1.2s}
+@keyframes bob{50%{transform:translateY(-8px)}}
+.mid{font-size:2.2rem;margin-bottom:60px;animation:beat 1.1s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.25)}}
+.mood-happy{display:none}
+.done .mood-happy{display:inline}
+.done .mood-sad{display:none}
+.card{background:var(--card);border:3px dashed var(--pink2);border-radius:28px;padding:20px 20px;margin:14px 0;box-shadow:0 10px 24px var(--shadow)}
+.card p{margin:0;font-size:1.12rem;line-height:1.5}
+.promises{display:grid;gap:10px;margin:14px 0}
+.promises div{background:var(--chip);border-radius:999px;padding:10px 16px;font-weight:700}
+h2{font-size:1.7rem;margin:0 0 14px;color:var(--pink)}
+.btns{display:flex;justify-content:center;gap:18px;min-height:60px}
+button{font:inherit;font-weight:800;font-size:1.25rem;border:0;border-radius:999px;padding:12px 34px;cursor:pointer;color:#fff;background:linear-gradient(135deg,var(--pink),var(--pink2));box-shadow:0 6px 0 #d9387f,0 10px 18px var(--shadow);transition:transform .15s}
+button:hover{transform:scale(1.07)}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.no{background:linear-gradient(135deg,#ff9ac6,#ffb7d6);box-shadow:0 6px 0 #e26ca2;z-index:5;transition:left .25s ease,top .25s ease,transform .15s}
+#done h2{font-size:2rem}
+.big{font-size:3rem;animation:beat 1s ease-in-out infinite}
+@media (prefers-reduced-motion:reduce){.char,.mid,.big{animation:none}.floaty{display:none}}
+</style>
+</head>
+<body>
+<div class="floaty" id="floaty" aria-hidden="true"></div>
+<main id="app">
+  <h1>I’m so sorry 💗</h1>
+  <p class="sub">from the bottom of my heart</p>
+
+  <div class="chars" id="chars">
+    <!-- Bear -->
+    <svg class="char" viewBox="0 0 120 130" role="img" aria-label="Cute bear">
+      <circle cx="26" cy="30" r="14" fill="#b87445"/><circle cx="94" cy="30" r="14" fill="#b87445"/>
+      <circle cx="26" cy="30" r="7" fill="#ffb3d1"/><circle cx="94" cy="30" r="7" fill="#ffb3d1"/>
+      <ellipse cx="60" cy="108" rx="34" ry="24" fill="#c8895a"/>
+      <ellipse cx="60" cy="112" rx="18" ry="14" fill="#f3d3b0"/>
+      <circle cx="60" cy="62" r="42" fill="#c8895a"/>
+      <ellipse cx="60" cy="76" rx="18" ry="14" fill="#f3d3b0"/>
+      <ellipse cx="32" cy="72" rx="8" ry="5" fill="#ff8cc0" opacity=".75"/><ellipse cx="88" cy="72" rx="8" ry="5" fill="#ff8cc0" opacity=".75"/>
+      <ellipse cx="60" cy="69" rx="5.5" ry="4" fill="#3b1d14"/>
+      <g class="mood-sad">
+        <circle cx="44" cy="56" r="5.5" fill="#3b1d14"/><circle cx="76" cy="56" r="5.5" fill="#3b1d14"/>
+        <circle cx="45.8" cy="54" r="2" fill="#fff"/><circle cx="77.8" cy="54" r="2" fill="#fff"/>
+        <path d="M52 85 Q60 78 68 85" fill="none" stroke="#3b1d14" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M40 64 q-4 8 0 11 q4 -3 0 -11z" fill="#8fd3ff"/>
+      </g>
+      <g class="mood-happy">
+        <path d="M38 58 Q44 50 50 58" fill="none" stroke="#3b1d14" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 58 Q76 50 82 58" fill="none" stroke="#3b1d14" stroke-width="3" stroke-linecap="round"/>
+        <path d="M51 77 Q60 90 69 77 Z" fill="#ff6b9a" stroke="#3b1d14" stroke-width="2" stroke-linejoin="round"/>
+      </g>
+    </svg>
+    <div class="mid" aria-hidden="true">💕</div>
+    <!-- Panda -->
+    <svg class="char b" viewBox="0 0 120 130" role="img" aria-label="Cute panda">
+      <circle cx="26" cy="30" r="14" fill="#3a3340"/><circle cx="94" cy="30" r="14" fill="#3a3340"/>
+      <ellipse cx="60" cy="108" rx="34" ry="24" fill="#fff" stroke="#f2b8d2" stroke-width="2"/>
+      <ellipse cx="30" cy="104" rx="10" ry="16" fill="#3a3340" transform="rotate(20 30 104)"/>
+      <ellipse cx="90" cy="104" rx="10" ry="16" fill="#3a3340" transform="rotate(-20 90 104)"/>
+      <circle cx="60" cy="62" r="42" fill="#fff" stroke="#f2b8d2" stroke-width="2"/>
+      <ellipse cx="44" cy="58" rx="9" ry="11" fill="#3a3340" transform="rotate(25 44 58)"/>
+      <ellipse cx="76" cy="58" rx="9" ry="11" fill="#3a3340" transform="rotate(-25 76 58)"/>
+      <ellipse cx="32" cy="74" rx="8" ry="5" fill="#ff8cc0" opacity=".75"/><ellipse cx="88" cy="74" rx="8" ry="5" fill="#ff8cc0" opacity=".75"/>
+      <ellipse cx="60" cy="70" rx="5.5" ry="4" fill="#3a3340"/>
+      <g class="mood-sad">
+        <circle cx="44" cy="57" r="4.5" fill="#fff"/><circle cx="76" cy="57" r="4.5" fill="#fff"/>
+        <circle cx="44.5" cy="58" r="2.4" fill="#3a3340"/><circle cx="75.5" cy="58" r="2.4" fill="#3a3340"/>
+        <path d="M52 85 Q60 78 68 85" fill="none" stroke="#3a3340" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M86 66 q-4 8 0 11 q4 -3 0 -11z" fill="#8fd3ff"/>
+      </g>
+      <g class="mood-happy">
+        <path d="M38 58 Q44 50 50 58" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 58 Q76 50 82 58" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M51 78 Q60 91 69 78 Z" fill="#ff6b9a" stroke="#3a3340" stroke-width="2" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="card">
+    <p>I said words I should never have said, and I hurt you. That’s the last thing I ever want to do to the person I love most. I’m truly sorry, and I promise I’ll never do that again. 🥺💗</p>
+  </div>
+
+  <div class="promises">
+    <div>🌸 I’ll think before I speak</div>
+    <div>🎀 I’ll always listen to you</div>
+    <div>🍓 I’ll love you even more, every day</div>
+  </div>
+
+  <section id="q1" class="card">
+    <h2>Will you forgive me? 🥺👉👈</h2>
+    <div class="btns"><button id="yes1">Yes 💖</button><button class="no" id="no1">No 💔</button></div>
+  </section>
+
+  <section id="q2" class="card" hidden>
+    <h2>Do you still love me? 🥹💕</h2>
+    <div class="btns"><button id="yes2">Yes 💖</button><button class="no" id="no2">No 💔</button></div>
+  </section>
+
+  <section id="done" class="card" hidden>
+    <div class="big">💖</div>
+    <h2>I’m glad you forgave me!</h2>
+    <p>Thank you for being you. I love you so much, and I’ll keep making you smile. 🐻🐼💗</p>
+  </section>
+</main>
+
+<script>
+(function(){
+  var px=innerWidth/2,py=innerHeight/2;
+  var floaty=document.getElementById("floaty");
+  var emojis=["💗","💖","💕","🌸","🎀","✨"];
+  function spawn(n,burst){
+    for(var i=0;i<n;i++){
+      var s=document.createElement("span");
+      s.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+      s.style.left=Math.random()*100+"vw";
+      s.style.fontSize=(14+Math.random()*22)+"px";
+      s.style.animationDuration=(burst?3+Math.random()*3:8+Math.random()*8)+"s";
+      if(burst)s.style.animationDelay=Math.random()*.6+"s";
+      floaty.appendChild(s);
+      (function(el){setTimeout(function(){el.remove()},16000)})(s);
+    }
+  }
+  spawn(10,false);
+  setInterval(function(){spawn(1,false)},1200);
+
+  function dodge(b){
+    if(b.offsetParent===null&&b.style.position!=="fixed")return;
+    if(b.style.position!=="fixed"){
+      var r=b.getBoundingClientRect();
+      b.style.position="fixed";b.style.left=r.left+"px";b.style.top=r.top+"px";
+      void b.offsetWidth;
+    }
+    var w=b.offsetWidth,h=b.offsetHeight,m=12;
+    var maxX=innerWidth-w-m,maxY=innerHeight-h-m,x,y,tries=0;
+    do{
+      x=m+Math.random()*Math.max(maxX-m,1);
+      y=m+Math.random()*Math.max(maxY-m,1);
+      tries++;
+    }while(tries<12&&Math.hypot(x+w/2-px,y+h/2-py)<180);
+    b.style.left=x+"px";b.style.top=y+"px";
+  }
+  var nos=[].slice.call(document.querySelectorAll(".no"));
+  nos.forEach(function(b){
+    ["mouseenter","pointerenter","focus","click","pointerdown"].forEach(function(ev){
+      b.addEventListener(ev,function(e){e.preventDefault();dodge(b);b.blur()});
+    });
+    b.addEventListener("touchstart",function(e){e.preventDefault();dodge(b)},{passive:false});
+  });
+  document.addEventListener("pointermove",function(e){
+    px=e.clientX;py=e.clientY;
+    nos.forEach(function(b){
+      if(b.offsetParent===null)return;
+      var r=b.getBoundingClientRect();
+      if(Math.hypot(r.left+r.width/2-px,r.top+r.height/2-py)<Math.max(r.width,r.height)*0.9+30)dodge(b);
+    });
+  });
+
+  var q1=document.getElementById("q1"),q2=document.getElementById("q2"),dn=document.getElementById("done");
+  document.getElementById("yes1").addEventListener("click",function(){
+    q1.hidden=true;q2.hidden=false;spawn(14,true);
+  });
+  document.getElementById("yes2").addEventListener("click",function(){
+    q2.hidden=true;dn.hidden=false;
+    document.getElementById("chars").classList.add("done");
+    spawn(60,true);
+    dn.scrollIntoView({behavior:"smooth",block:"center"});
+  });
+})();
+</script>
+</body>
+</html>
